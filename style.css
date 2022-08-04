@@ -37,93 +37,108 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
 body{
-	width: 1440px;
+
 }
 
 .wrapper{
-	width: 1440px;
+	display: flex;
 	min-height: 100%;
 	overflow: hidden;
-	display: flex;
 	flex-direction: column;
 }
+
 .container {
-	display: inline-flex;
-	width:1328px;
+	max-width:1440px;
 	margin: 0px auto;
-	justify-content: space-between;
-	align-items: center;
+	padding: 0 15px;
 }
 
-.header {
-	position:relative;
+.header{
+	flex: 1 1 auto;
+	position: relative;
+}
+
+
+.header__bg{
 	display: flex;
-	height:120px;
+	flex: 1 1 auto;
+	height: 84px;
 	background: #4A2B33;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 36px;
 }
 
 .nav {
 	display: flex;
+	flex: 0 0 auto;	
+	margin-left: 56px;
 }
 
 .nav__li{
 	display: inline-flex;
 }
 
-.nav__item {
+.nav__item{
 	text-decoration:none;
-	display: inline-flex;
 	font-family: 'Inter';
 	font-weight: 400;
 	font-size: 15px;
 	color: #D27487;
-	align-items: center;
 	margin-right: 20px;
 }
 
 .nav__item:hover {
 	text-decoration: none;
-	display: inline-flex;
 	font-family: 'Inter';
 	font-weight: 400;
 	font-size: 15px;
 	color: #f5103e;
-	align-items: center;
 	margin-right: 20px;
 	transition: 0.5ms;
 }
 
 .title__header {
+	display: flex;
 	color: #D27487;
 	font-family: 'Sora';
-	font-size: 40px;
-	font-weight: 800px;
-	padding-left: 0px;
+	font-size: 45px;
+	font-weight: 900px;
 	margin-left: -80px;
 	}
 
 .social__media {
 	display: flex;
 	color: #D27487;
+	margin-right: 50px;
 }
 
 .img__media{
 	margin-right: 16.4px;
+	position:relative;
 }
 
 .container__n1{
 	display: flex;
-	background-color: #4A2B33;
-	justify-content: center;
+	flex: 0 1 auto;
+	background: #4A2B33;
+	padding: 36px 56px;
+	justify-content: space-around;
 	align-items: center;
 }
 
 .n1__image{
-	padding-bottom: 36px;
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: space-around;
 	}
 
+.n1__image img{
+	max-width: 100%;
+}
 .container__about{
 	display: flex;
+	flex: 0 1 50%;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -156,12 +171,13 @@ body{
 
 .container__menu{
 	display: flex;
+	flex: 1 1 auto;
 	background: #E9E9E3;
-	flex-direction: row;
+	height: 1277px;
+	justify-content: space-between;
 }
 
 .menu__item{
-	width: 720px;
 	margin-top: 120px;
 	margin-left: 56px;
 	flex-direction: column;
@@ -219,18 +235,27 @@ body{
 }
 
 .menu__image{
-	margin-top: 120px;
-	margin-right: 56px;
-	margin-bottom: 120px;
+	display: flex;
+	flex: 1 1 100%;
+	height: 1037px;
+	margin: 120px 56px;
+	justify-content: space-around;
+}
+
+.menu__image img{
+	max-width: 100%;
 }
 
 .time__info{
 	display: flex;
+	flex: 0 1 auto;
 	height: 473px;
-	width: 1440px;
 	background: #AA9E54;
-	justify-content: space-around;
-	align-items: flex-start;
+	justify-content: space-evenly;
+}
+
+.info__hours{
+	margin-left: 90px;
 }
 
 .info__title{
@@ -253,9 +278,13 @@ body{
 	color: #FFFFFF;
 }
 
+.info__mondays{
+	margin-right: -40px;
+}
+
 .container__interior {
 	display: flex;
-	width: 1440px;
+	flex: 1 1 auto;
 	height: 912px;
 	flex-wrap:wrap;
 	justify-content: space-evenly;
@@ -266,42 +295,36 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	margin-right: -6px;
 }
 
 .interior__bottles{
 	display: flex;
 	height: 300px;
-	width: 644px;
 	margin-bottom: 40px;
-}
-
-.interior__hall{
-	display: flex;
-	height: 640px;
-	width: 644px;
-	align-self: center;
-	margin-left: -7px;
 }
 
 .interior__food{
 	display: flex;
 	height: 300px;
-	width: 644px;
+}
+
+.interior__hall{
+	display: flex;
+	height: 640px;
+	align-self: center;
 }
 
 .container__award{
-	height: 461px;
-	width: 1440px;
-	background: #4A2B33;
 	display: flex;
+	flex: 1 1 50%;
+	height: 461px;
+	background: #4A2B33;
 	justify-content:space-between;
 	align-items: center;
 }
 
 .award__info{
 	height: 125px;
-	width: 413px;
 	font-family: 'Azeret Mono';
 	font-weight: 400;
 	font-size: 47px;
@@ -309,8 +332,8 @@ body{
 	letter-spacing: 1px;
 	color: #D27487;
 	margin-left: 56px;
-	text-align: start;
-	align-self:auto;
+	text-align:start;
+	align-items: center;
 }
 
 .award__text{
@@ -327,6 +350,7 @@ body{
 
 .footer{
 	display: flex;
+	flex: 0 1 33.333%;
 	position:relative;
 	justify-content: space-around;
 	text-align: center;
@@ -335,7 +359,6 @@ body{
 
 .footer__nav {
 	display:flex;
-	width: 1328px;
 	height: 187px;
 	flex-direction:column;
 	justify-content: space-evenly;
@@ -343,7 +366,6 @@ body{
 
 .li__first{
 	display: flex;
-	width: 1328px;
 	height: 23px;
 	justify-content:center;
 	align-items: center;
@@ -351,7 +373,6 @@ body{
 
 .li__second{
 	display: flex;
-	width: 1328px;
 	height: 23px;
 	justify-content:center;
 	align-items: center;
